@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "82afcaa4-0125-4708-9427-c5b4366d6ce2",
+		"name": "todo_list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11955178"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"rizal@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"username\": \"rizal\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"rizal@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"username\": \"rizal\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_new_checklist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZWE1NTdjZDVlMTk1MDExNzZlZjZhNSIsImlhdCI6MTcyNjYzNTA4MiwiZXhwIjoxNzI2NjM4NjgyfQ.Z4jJ6GJI-lEAnISj60fwadj18P79a6EM8OtEKWWn02g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Daily Checklist\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/checklists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"checklists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_checklist_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZWE1NTdjZDVlMTk1MDExNzZlZjZhNSIsImlhdCI6MTcyNjYzNzEwMiwiZXhwIjoxNzI2NjQwNzAyfQ.uT6kcUx9_dUb94hvPTllTRqUCJcu4jM7DNfsXmYNy4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/checklists/66ea66ed2b5f25f85f16ca91",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"checklists",
+						"66ea66ed2b5f25f85f16ca91"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_checklist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZWE1NTdjZDVlMTk1MDExNzZlZjZhNSIsImlhdCI6MTcyNjYzNzEwMiwiZXhwIjoxNzI2NjQwNzAyfQ.uT6kcUx9_dUb94hvPTllTRqUCJcu4jM7DNfsXmYNy4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/checklists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"checklists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_new_item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZWE1NTdjZDVlMTk1MDExNzZlZjZhNSIsImlhdCI6MTcyNjYzNzEwMiwiZXhwIjoxNzI2NjQwNzAyfQ.uT6kcUx9_dUb94hvPTllTRqUCJcu4jM7DNfsXmYNy4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"harry potter 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/checklists/66ea669e2b5f25f85f16ca8a/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"checklists",
+						"66ea669e2b5f25f85f16ca8a",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
