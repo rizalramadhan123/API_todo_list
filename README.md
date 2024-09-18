@@ -4,3 +4,7 @@ Berikut Ini adalah hasil API Tes nya pak untuk data nya bisa di check di collect
 requirement
 
 menggunakan Node js dengan database mongo db
+
+dan sudah mengimplementasikan JWT 
+
+Terimakasih
